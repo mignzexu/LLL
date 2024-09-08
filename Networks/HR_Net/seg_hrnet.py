@@ -315,7 +315,7 @@ class HighResolutionNet(nn.Module):
         self.stage4, pre_stage_channels = self._make_stage(
             self.stage4_cfg, num_channels, multi_scale_output=True)
 
-        last_inp_channels = np.int(np.sum(pre_stage_channels))
+        last_inp_channels = int(np.sum(pre_stage_channels))
 
         self.last_layer = nn.Sequential(
             nn.Conv2d(
@@ -494,7 +494,7 @@ def get_seg_model(train=False):
     from Networks.HR_Net.default import _C as hr_config
     from Networks.HR_Net.default import update_config
 
-    update_config(hr_config, './Networks/HR_Net/seg_hrnet_w48.yaml')
+    update_config(hr_config, '/home/mingze/Experiments/FIDTM/FIDTM/Networks/HR_Net/seg_hrnet_w48.yaml')
     model = HighResolutionNet(hr_config)
     from Networks.HR_Net.config import cfg
 

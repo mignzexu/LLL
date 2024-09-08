@@ -16,6 +16,7 @@ import nni
 from nni.utils import merge_parameter
 from config import return_args, args
 import time
+import numpy as np
 
 warnings.filterwarnings('ignore')
 '''fixed random seed '''
@@ -92,7 +93,7 @@ def main(args):
         end1 = time.time()
 
         '''inference '''
-        if epoch % 10 == 0 and epoch >= 200:
+        if epoch % 10 == 0 and epoch >= 20:
             prec1, visi = validate(test_data, model, args)
 
             end2 = time.time()

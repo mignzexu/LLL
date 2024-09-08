@@ -9,7 +9,6 @@ import scipy.spatial
 from scipy.ndimage.filters import gaussian_filter
 import math
 import scipy.io as io
-from matplotlib import pyplot as plt
 import sys
 
 '''please set your dataset path'''

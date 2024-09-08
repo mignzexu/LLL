@@ -39,9 +39,9 @@ def load_net(fname, net):
 
 
 def save_checkpoint(state, visi, is_best, save_path, filename='checkpoint.pth'):
-    torch.save(state, './' + str(save_path) + '/' + filename)
+    torch.save(state, str(save_path) + '/' + filename)
     if is_best:
-        shutil.copyfile('./' + str(save_path) + '/' + filename, './' + str(save_path) + '/' + 'model_best.pth')
+        shutil.copyfile(str(save_path) + '/' + filename, str(save_path) + '/' + 'model_best.pth')
 
     for i in range(len(visi)):
         img = visi[i][0]

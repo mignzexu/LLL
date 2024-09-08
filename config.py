@@ -3,11 +3,11 @@ import argparse
 parser = argparse.ArgumentParser(description='FIDTM')
 
 
-parser.add_argument('--dataset', type=str, default='ShanghaiA',
+parser.add_argument('--dataset', type=str, default='ShanghaiB',
                     help='choice train dataset')
 
 
-parser.add_argument('--save_path', type=str, default='save_file/A_baseline',
+parser.add_argument('--save_path', type=str, default='/scratch/mingze/FIDTM/save_file/B_baseline',
                     help='save checkpoint directory')
 parser.add_argument('--workers', type=int, default=16,
                     help='load data workers')
@@ -23,7 +23,7 @@ parser.add_argument('--pre', type=str, default=None,
 #                     help='pre-trained model directory')
 
 
-parser.add_argument('--batch_size', type=int, default=16,
+parser.add_argument('--batch_size', type=int, default=8,
                     help='input batch size for training')
 parser.add_argument('--crop_size', type=int, default=256,
                     help='crop size for training')
